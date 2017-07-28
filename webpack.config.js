@@ -14,7 +14,9 @@ module.exports = {
     publicPath: '/h5/',
     filename: 'js/[name].js'
   },
-
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       {
