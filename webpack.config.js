@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     'home': './src/js/home.jsx',
     'user': './src/js/user.js',
+    'lifting': './src/js/lifting.jsx'
   },
   output: {
     path: outputPath,  // 文件打包到此目录下

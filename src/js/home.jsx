@@ -2,13 +2,14 @@ import '../css/style.scss'
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Test from './test'
+import NameForm from './formTest'
 
 
 
 class Clock extends Component {
   constructor(props) {
     super(props)
-    this.state = { data: new Date(), numbers: ['a', 'b', 'c', 'd', 'e'], inpValue: 'focus' }
+    this.state = { data: new Date(), numbers: ['a', 'b', 'c', 'd', 'e'], inpValue: 'focus', like: 'like' }
   }
   changeInp(event) {
     this.setState({
@@ -32,6 +33,11 @@ class Clock extends Component {
     });
   }
 
+  changeLikeState() {
+    this.setState({
+      like: (this.state.like == 'like') ? 'unlike' : 'like'
+    })
+  }
   render() {
     const liItems = this.state.numbers.map((index, item) => {
       return <li key={index.toString()}>li {item}</li>
@@ -42,6 +48,10 @@ class Clock extends Component {
         <ul>{liItems}</ul>
         <p>now time is {this.state.data.toLocaleTimeString()}</p>
         <input onChange={this.changeInp.bind(this)} ref='myInput' type="text" value={this.state.inpValue} />
+        <button onClick={this.changeLikeState.bind(this)}>{this.state.like}</button>
+        <h2>form</h2>
+        <NameForm />
+
       </div>
     )
   }
@@ -57,10 +67,10 @@ function App() {
   );
 }
 
-render(
-  <App />,
-  document.getElementById('app')
-);
+// render(
+//   <App />,
+//   document.getElementById('app')
+// );
 
 
 
