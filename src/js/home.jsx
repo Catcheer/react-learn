@@ -51,6 +51,7 @@ class Clock extends Component {
         <button onClick={this.changeLikeState.bind(this)}>{this.state.like}</button>
         <h2>form</h2>
         <NameForm />
+        <Test name='xiaona' date={new Date()} />
 
       </div>
     )

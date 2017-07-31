@@ -55,14 +55,10 @@ class Calculator extends Component {
 
 
   render() {
-
     const scale = this.state.scale
     const temperature = this.state.temperature
-
     const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature
     const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature
-
-
     return (
       <div>
         <TemperatureInput
@@ -77,13 +73,6 @@ class Calculator extends Component {
           celsius={parseFloat(celsius)} />
       </div>
     )
-
-    // return (
-    //   <div>
-    //     <TemperatureInput scale='c' />
-    //     <TemperatureInput scale='f' />
-    //   </div>
-    // )
   }
 }
 
@@ -95,9 +84,6 @@ class TemperatureInput extends Component {
   }
 
   handleChange(e) {
-    // this.setState({
-    //   temperature: e.target.value
-    // })
     this.props.onTemperatureChange(e.target.value)
   }
 
@@ -116,7 +102,8 @@ class TemperatureInput extends Component {
 
 
 
-render(
-  <Calculator />,
-  document.getElementById('app')
-)
+// render(
+//   <Calculator />,
+//   document.getElementById('app')
+// )
+
