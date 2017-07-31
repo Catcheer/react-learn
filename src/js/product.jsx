@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
+// test smile
 var PRODUCTS = [
   { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
   { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
