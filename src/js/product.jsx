@@ -56,7 +56,6 @@ class ProductTable extends Component {
     )
 
   }
-
 }
 
 class SearchBar extends Component {
